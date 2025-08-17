@@ -6,6 +6,57 @@
     <title>تشغيل جميع العاب البلاي استيشن علي الايفون - محمد مجدي</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="video-page.css">
+    <style>
+        /* Style for the video container */
+        .video-thumbnail-container {
+            position: relative;
+            display: inline-block; /* Or block, depending on layout */
+            width:100%; 
+            max-width:600px;
+        }
+
+        .video-thumbnail-container img {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.3); /* Optional: dark overlay on hover */
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .play-button-overlay:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .play-icon {
+            background-color: rgba(255, 0, 0, 0.85);
+            border-radius: 50%;
+            width: 80px; /* Adjust size as needed */
+            height: 80px; /* Adjust size as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-icon span {
+            color: white;
+            font-size: 40px; /* Adjust icon size */
+            margin-left: 5px; /* Small adjustment for centering */
+        }
+    </style>
 </head>
 <body>
     <!-- خلفية النجوم المتحركة -->
@@ -61,76 +112,72 @@
             <!-- عنوان الفيديو -->
             <h1 class="video-title">تشغيل جميع العاب البلاي استيشن علي الايفون 👇🏻</h1>
 
-            <!-- صورة مصغرة مع رابط -->
-<a href="https://apgy.in/yt/fasKONK57jU" target="_blank">
-  <img src="https://img.youtube.com/vi/fasKONK57jU/maxresdefault.jpg" 
-       alt="شغل الفيديو" 
-       style="width:100%; max-width:600px; border-radius:10px; cursor:pointer;">
-    <div style="position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
-              background-color: rgba(255,0,0,0.85); border-radius:50%; padding:20px; cursor:pointer;">
-    <span style="color:white; font-size:35px;">▶</span>
-  </div>
-</a>
+            <!-- صورة مصغرة مع رابط وزر التشغيل -->
+            <a href="https://apgy.in/yt/fasKONK57jU" target="_blank" class="video-thumbnail-container">
+                <img src="https://img.youtube.com/vi/fasKONK57jU/maxresdefault.jpg" alt="شغل الفيديو">
+                <div class="play-button-overlay">
+                    <div class="play-icon">
+                        <span>▶</span>
+                    </div>
+                </div>
+            </a>
 
-                <!-- وصف الفيديو -->
-                <div class="video-description">
-                    <h2>وصف الفيديو</h2>
-                    <p>
-                        في هذا الفيديو، سأشرح لكم كيفية تشغيل جميع ألعاب البلاي ستيشن على الايفون الخاص بكم.
-                    </p>
+            <!-- وصف الفيديو -->
+            <div class="video-description">
+                <h2>وصف الفيديو</h2>
+                <p>
+                    في هذا الفيديو، سأشرح لكم كيفية تشغيل جميع ألعاب البلاي ستيشن على الايفون الخاص بكم.
+                </p>
+                
+                <h3>ما ستتعلمه في هذا الفيديو:</h3>
+                <ul>
+                    <li>أفضل محاكيات البلاي ستيشن للايفون.</li>
+                    <li>خطوات تثبيت المحاكي والألعاب.</li>
+                    <li>نصائح للحصول على أفضل أداء للألعاب.</li>
+                </ul>
+            </div>
+
+            <!-- روابط التحميل -->
+            <div class="download-section">
+                <h2>روابط التحميل</h2>
+                <div class="download-links">
+                    <a href="download-page-template.html?video=video6" class="download-link">
+                        <div class="download-icon">&#x2B07;</div>
+                        <div class="download-info">
+                            <h4>اضغط هنا للتحميل</h4>
+                            <p>جميع روابط التحميل الخاصة بهذا الفيديو</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- فيديوهات ذات صلة -->
+            <div class="related-videos">
+                <h2>فيديوهات ذات صلة</h2>
+                <div class="related-grid">
+                    <a href="video1.html" class="related-video">
+                        <img src="https://img.youtube.com/vi/zNOA8Gwr-Fo/maxresdefault.jpg" alt="اختصار لتحويل الصور الي PDF بدون برامج">
+                        <div class="related-info">
+                            <h4>اختصار لتحويل الصور الي PDF بدون برامج</h4>
+                            <span>شاهد الآن</span>
+                        </div>
+                    </a>
                     
-                    <h3>ما ستتعلمه في هذا الفيديو:</h3>
-                    <ul>
-                        <li>أفضل محاكيات البلاي ستيشن للايفون.</li>
-                        <li>خطوات تثبيت المحاكي والألعاب.</li>
-                        <li>نصائح للحصول على أفضل أداء للألعاب.</li>
-                    </ul>
-
-
-                </div>
-
-                <!-- روابط التحميل -->
-                <div class="download-section">
-                    <h2>روابط التحميل</h2>
-                    <div class="download-links">
-                        <a href="download-page-template.html?video=video6" class="download-link">
-                            <div class="download-icon">&#x2B07;</div>
-                            <div class="download-info">
-                                <h4>اضغط هنا للتحميل</h4>
-                                <p>جميع روابط التحميل الخاصة بهذا الفيديو</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- فيديوهات ذات صلة -->
-                <div class="related-videos">
-                    <h2>فيديوهات ذات صلة</h2>
-                    <div class="related-grid">
-                        <a href="video1.html" class="related-video">
-                            <img src="https://img.youtube.com/vi/zNOA8Gwr-Fo/maxresdefault.jpg" alt="اختصار لتحويل الصور الي PDF بدون برامج">
-                            <div class="related-info">
-                                <h4>اختصار لتحويل الصور الي PDF بدون برامج</h4>
-                                <span>شاهد الآن</span>
-                            </div>
-                        </a>
-                        
-                        <a href="video2.html" class="related-video">
-                            <img src="https://img.youtube.com/vi/G2Qym-n7Xcs/maxresdefault.jpg" alt="تفعيل ميزه الذكاء الاصطناعي في الانستقرام">
-                            <div class="related-info">
-                                <h4>تفعيل ميزه الذكاء الاصطناعي في الانستقرام</h4>
-                                <span>شاهد الآن</span>
-                            </div>
-                        </a>
-                        
-                        <a href="video3.html" class="related-video">
-                            <img src="https://img.youtube.com/vi/haREOEs2jFo/maxresdefault.jpg" alt="اضافة ChatGPT في تطبيق Whatsspp">
-                            <div class="related-info">
-                                <h4>اضافة ChatGPT في تطبيق Whatsspp</h4>
-                                <span>شاهد الآن</span>
-                            </div>
-                        </a>
-                    </div>
+                    <a href="video2.html" class="related-video">
+                        <img src="https://img.youtube.com/vi/G2Qym-n7Xcs/maxresdefault.jpg" alt="تفعيل ميزه الذكاء الاصطناعي في الانستقرام">
+                        <div class="related-info">
+                            <h4>تفعيل ميزه الذكاء الاصطناعي في الانستقرام</h4>
+                            <span>شاهد الآن</span>
+                        </div>
+                    </a>
+                    
+                    <a href="video3.html" class="related-video">
+                        <img src="https://img.youtube.com/vi/haREOEs2jFo/maxresdefault.jpg" alt="اضافة ChatGPT في تطبيق Whatsspp">
+                        <div class="related-info">
+                            <h4>اضافة ChatGPT في تطبيق Whatsspp</h4>
+                            <span>شاهد الآن</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -163,4 +210,3 @@
     </footer>
 </body>
 </html>
-
