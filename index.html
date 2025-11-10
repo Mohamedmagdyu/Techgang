@@ -4,34 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>محمد مجدي - تطبيقات وخدمات مجانية</title>
+    
+    <!-- هذا الرابط لملف CSS الخارجي، يمكنك تركه أو حذفه لأننا سنضع الأكواد مباشرة هنا -->
     <link rel="stylesheet" href="styles.css">
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8213574895484109"
      crossorigin="anonymous"></script>
+
+    <!-- بداية كود CSS المدمج -->
+    <style>
+        /* --- تعديلات لتصغير واجهة البطاقات وعرض بطاقتين جنباً إلى جنب --- */
+
+        /* 
+          الشبكة التي تحتوي على البطاقات.
+          - gap: يحدد المسافة بين البطاقات.
+          - grid-template-columns: يحدد عدد الأعمدة.
+        */
+        .videos-grid {
+            display: grid;
+            gap: 20px; /* المسافة بين البطاقات */
+            /* عرض 3 بطاقات في الصف على الشاشات الكبيرة */
+            grid-template-columns: repeat(3, 1fr ); 
+        }
+
+        /* 
+          تصميم البطاقة نفسها.
+        */
+        .video-card {
+            background-color: #2c2c2e; /* لون خلفية البطاقة */
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 
+          تصغير حجم الخط للعنوان والوصف داخل البطاقة 
+        */
+        .video-card h3 {
+            font-size: 1rem; /* حجم عنوان التطبيق */
+            margin-bottom: 8px;
+        }
+
+        .video-card p {
+            font-size: 0.85rem; /* حجم الوصف */
+            line-height: 1.4;
+        }
+
+        /* 
+          تصغير حجم زر "تفعيل العرض" 
+        */
+        .video-card .btn.btn-small {
+            padding: 8px 14px; /* حجم الحشو الداخلي للزر */
+            font-size: 0.8rem; /* حجم خط الزر */
+            width: 100%; /* جعل الزر يملأ عرض البطاقة */
+        }
+
+
+        /* --- لجعل التصميم متجاوب مع الشاشات المختلفة --- */
+
+        /* للشاشات المتوسطة (مثل الأجهزة اللوحية الصغيرة) */
+        @media (max-width: 992px) {
+            .videos-grid {
+                /* عرض بطاقتين في الصف */
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+
+        /* 
+          للشاشات الصغيرة (مثل الهواتف) 
+          هذا هو التعديل الأهم لتحقيق طلبك
+        */
+        @media (max-width: 768px) {
+            .videos-grid {
+                /* عرض بطاقتين في الصف بدلاً من واحدة */
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 15px; /* تقليل المسافة بين البطاقات لتناسب الشاشة الصغيرة */
+            }
+
+            .video-card h3 {
+                font-size: 0.9rem; /* تصغير الخط أكثر على الشاشة الصغيرة */
+            }
+
+            .video-card p {
+                font-size: 0.75rem; /* تصغير الوصف أكثر */
+            }
+        }
+    </style>
+    <!-- نهاية كود CSS المدمج -->
+
 </head>
 <body>
     <!-- خلفية النجوم المتحركة -->
     <div class="stars-background">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+        <!-- النجوم -->
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
     </div>
 
     <!-- الهيدر -->
@@ -105,6 +173,17 @@
                         <h3>اسم التطبيق الثالث</h3>
                         <p>وصف بسيط ومختصر عن التطبيق ومميزاته.</p>
                         <a href="app3-offer.html" class="btn btn-small">تفعيل العرض</a>
+                    </div>
+                </div>
+                 <!-- تطبيق 4 -->
+                <div class="video-card">
+                    <a href="app4-offer.html" class="video-thumbnail">
+                        <img src="https://via.placeholder.com/350x200.png?text=صورة+التطبيق+4" alt="صورة تطبيق 4">
+                    </a>
+                    <div class="video-info">
+                        <h3>اسم التطبيق الرابع</h3>
+                        <p>وصف بسيط ومختصر عن التطبيق ومميزاته.</p>
+                        <a href="app4-offer.html" class="btn btn-small">تفعيل العرض</a>
                     </div>
                 </div>
             </div>
