@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد مجدي - خبير تقني والخدمات المجانية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8.213574895484109e+15"
+     crossorigin="anonymous"></script>
+
+    <style>
+        /* إضافة الأنماط للأيقونات */
+        .apps-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
+            margin: 40px 0;
+        }
+
+        .apps-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .apps-section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0000, #ff6b6b);
+            margin: 15px auto;
+        }
+
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .app-card:hover::before {
+            left: 100%;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: #ff6b6b;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .app-card:hover .app-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .app-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff00, #00aa00);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .apps-container {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .app-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .apps-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- خلفية النجوم المتحركة -->
+    <div class="stars-background">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-white">Tech Gang Hub</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#apps">التطبيقات</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#about">معلومات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم التطبيقات الرئيسي -->
+    <section class="apps-section" id="apps">
+        <h2>أحدث التطبيقات والخدمات المجانية</h2>
+
+        <div class="apps-container">
+            <!-- Instagram Pro -->
+            <div class="app-card" onclick="openApp('instagram')">
+                <div class="app-icon" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="app-name">Instagram Pro</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- YouTube Premium -->
+            <div class="app-card" onclick="openApp('youtube')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #FF0000, #CC0000);">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="app-name">YouTube Premium</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Netflix Mod -->
+            <div class="app-card" onclick="openApp('netflix')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #E50914, #B20710);">
+                    <i class="fas fa-film"></i>
+                </div>
+                <div class="app-name">Netflix Mod</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Spotify Premium -->
+            <div class="app-card" onclick="openApp('spotify')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #1DB954, #168f3f);">
+                    <i class="fab fa-spotify"></i>
+                </div>
+                <div class="app-name">Spotify Premium</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Canva Pro -->
+            <div class="app-card" onclick="openApp('canva')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #00C4CC, #0096a0);">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="app-name">Canva Pro</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Photoshop Mobile -->
+            <div class="app-card" onclick="openApp('photoshop')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #31A8FF, #0078d4);">
+                    <i class="fas fa-image"></i>
+                </div>
+                <div class="app-name">Photoshop Mobile</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- TikTok Pro -->
+            <div class="app-card" onclick="openApp('tiktok')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #000000, #ee1d52);">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="app-name">TikTok Pro</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- WhatsApp Plus -->
+            <div class="app-card" onclick="openApp('whatsapp')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #25D366, #128C7E);">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="app-name">WhatsApp Plus</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Telegram Premium -->
+            <div class="app-card" onclick="openApp('telegram')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #0088cc, #006699);">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <div class="app-name">Telegram Premium</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Duolingo Plus -->
+            <div class="app-card" onclick="openApp('duolingo')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #58CC02, #3da802);">
+                    <i class="fas fa-language"></i>
+                </div>
+                <div class="app-name">Duolingo Plus</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Office 365 -->
+            <div class="app-card" onclick="openApp('office')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #D83B01, #c42b00);">
+                    <i class="fas fa-file-word"></i>
+                </div>
+                <div class="app-name">Office 365</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+
+            <!-- Gaming Pass -->
+            <div class="app-card" onclick="openApp('gaming')">
+                <div class="app-icon" style="background: linear-gradient(135deg, #9146FF, #772ce8);">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="app-name">Gaming Pass</div>
+                <span class="app-badge">مجاني</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p>&copy; 2025 Tech Gang Hub - جميع الحقوق محفوظة</p>
+        <p>قناة محمد مجدي - خبير في مجال التطبيقات والتقنية</p>
+    </footer>
+
+    <script>
+        function openApp(appName) {
+            const appLinks = {
+                'instagram': '#',
+                'youtube': '#',
+                'netflix': '#',
+                'spotify': '#',
+                'canva': '#',
+                'photoshop': '#',
+                'tiktok': '#',
+                'whatsapp': '#',
+                'telegram': '#',
+                'duolingo': '#',
+                'office': '#',
+                'gaming': '#'
+            };
+
+            const url = appLinks[appName] || '#';
+            alert('قريباً: شرح تطبيق ' + appName);
+            // window.location.href = url;
+        }
+
+        // تأثير الظهور عند التحميل
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.app-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.5s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 50);
+            });
+        });
+    </script>
+</body>
+</html>
