@@ -10,6 +10,168 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- CSS Styles for the new section (Embedded for simplicity, should be moved to styles.css in a real project) -->
+	    <style>
+	        /* General Section Styling */
+	        .featured-apps {
+	            padding: 40px 0;
+	            background-color: transparent; /* Assuming the background is handled by stars-background */
+	            color: #fff;
+	        }
+	
+	        .featured-apps .container {
+	            max-width: 1000px;
+	            margin: 0 auto;
+	            padding: 0 15px;
+	        }
+	
+	        .featured-apps .section-title {
+	            text-align: center;
+	            font-size: 2.5em;
+	            margin-bottom: 10px;
+	            color: #00e676; /* Green color for emphasis */
+	            font-weight: bold;
+	        }
+	
+	        .featured-apps .section-subtitle {
+	            text-align: center;
+	            font-size: 1.1em;
+	            margin-bottom: 30px;
+	            color: #ccc;
+	        }
+	
+	        /* Apps Grid Layout - Mobile First */
+	        .apps-grid {
+	            display: grid;
+	            gap: 20px;
+	            /* On small screens, stack them */
+	            grid-template-columns: 1fr; 
+	        }
+	
+	        /* App Card Styling - Mimicking App Store List */
+	        .app-card {
+	            display: flex;
+	            align-items: center;
+	            padding: 15px;
+	            background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
+	            border-radius: 15px;
+	            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	            transition: transform 0.2s;
+	        }
+	
+	        .app-card:hover {
+	            transform: translateY(-3px);
+	            background-color: rgba(255, 255, 255, 0.1);
+	        }
+	
+	        /* App Icon */
+	        .app-icon-container {
+	            flex-shrink: 0;
+	            margin-left: 15px;
+	        }
+	
+	        .app-icon {
+	            width: 80px;
+	            height: 80px;
+	            border-radius: 18px; /* Rounded corners for the icon */
+	            object-fit: cover;
+	        }
+	
+	      .app-info {
+    flex-grow: 1;
+    min-width: 0;
+    text-align: right;
+    direction: rtl;
+	        }
+	
+	        .app-title {
+	            font-size: 1.2em;
+	            font-weight: bold;
+	            margin: 0 0 5px 0;
+	            white-space: nowrap;
+	            overflow: hidden;
+	            text-overflow: ellipsis;
+	        }
+	
+	        .app-developer {
+	            font-size: 0.9em;
+	            color: #aaa;
+	            margin-bottom: 5px;
+	        }
+	
+	        /* Rating Stars */
+.app-rating {
+    font-size: 1em;
+    color: #ffc107;
+    display: flex;
+    align-items: center;
+    direction: ltr;
+    justify-content: flex-end;
+	        }
+	
+	        .app-rating .star {
+	            margin-left: 2px;
+	        }
+	
+	        .app-rating .ratings-count {
+	            font-size: 0.8em;
+	            color: #aaa;
+	            margin-right: 8px;
+	        }
+	
+	        .app-rating .star.empty {
+	            color: #555;
+	        }
+	
+	        /* Price Box (Old Price and Free Button) */
+	        .app-price-box {
+	            flex-shrink: 0;
+	            display: flex;
+	            flex-direction: column;
+	            align-items: flex-end;
+	            text-align: left;
+	        }
+	
+	        .old-price {
+	            font-size: 0.9em;
+	            color: #aaa;
+	            text-decoration: line-through;
+	            margin-bottom: 5px;
+	        }
+	
+	        .btn-free {
+	            background-color: #00e676; /* Green button */
+	            color: #000;
+	            padding: 8px 15px;
+	            border-radius: 20px;
+	            font-weight: bold;
+	            text-decoration: none;
+	            font-size: 1em;
+	            min-width: 80px;
+	            text-align: center;
+	            transition: background-color 0.2s;
+	        }
+	
+	        .btn-free:hover {
+	            background-color: #00c853;
+	        }
+	
+	        /* Media Query for larger screens (Tablets/Desktops) */
+	        @media (min-width: 768px) {
+	            .apps-grid {
+	                /* On larger screens, show two columns */
+	                grid-template-columns: 1fr 1fr; 
+	            }
+	        }
+	            body {
+            padding-top: 60px; /* Adjust based on header height to prevent overlap */
+        }
+    </style>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8213574895484109"
+     crossorigin="anonymous"></script>
+</head>
+<body>
     <!-- خلفية النجوم المتحركة -->
     <div class="stars-background">
         <div class="star"></div>
