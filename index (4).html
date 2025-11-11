@@ -73,10 +73,11 @@
 	            object-fit: cover;
 	        }
 	
-	        /* App Info (Title, Developer, Rating) */
-	        .app-info {
-	            flex-grow: 1;
-	            min-width: 0; /* Allows content to shrink */
+	      .app-info {
+    flex-grow: 1;
+    min-width: 0;
+    text-align: right;
+    direction: rtl;
 	        }
 	
 	        .app-title {
@@ -95,11 +96,13 @@
 	        }
 	
 	        /* Rating Stars */
-	        .app-rating {
-	            font-size: 1em;
-	            color: #ffc107; /* Star color */
-	            display: flex;
-	            align-items: center;
+.app-rating {
+    font-size: 1em;
+    color: #ffc107;
+    display: flex;
+    align-items: center;
+    direction: ltr;
+    justify-content: flex-end;
 	        }
 	
 	        .app-rating .star {
