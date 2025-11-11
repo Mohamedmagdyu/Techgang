@@ -959,5 +959,24 @@ latform */
     color: #ffffff;
     text-shadow: none;
 }
+/* --------- كود عرض السقونات بجانب بعض --------- */
+.apps-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr; /* عمود واحد للموبايل */
+}
+
+@media (min-width: 768px) {
+    .apps-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .apps-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+/* --------- نهاية الكود --------- */
 
 
